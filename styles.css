@@ -16,7 +16,7 @@
 /* dark mode user-agent-styles */
 /* improves punctuation in supported browsers */
 html {
-  color-scheme: dark light;
+  color-scheme: dark;
   hanging-punctuation: first last;
 }
 
@@ -55,7 +55,12 @@ li {
 
 .site-title {
   font-size: 3rem;
+  margin-bottom: 0;
   text-align: center;
+}
+
+.site-subtitle {
+  font-size: 1.5rem;
 }
 
 .wrapper {
