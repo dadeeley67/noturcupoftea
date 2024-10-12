@@ -1,0 +1,185 @@
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+/* improves punctuation in supported browsers */
+html {
+  color-scheme: dark light;
+  hanging-punctuation: first last;
+}
+
+/* min body height */
+body {
+  min-height: 100svh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Improved heading in supported browsers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+/* improve readability with max-width on paragraphs and lists */
+/* prevent orphans in supported browsers */
+p,
+li {
+  max-width: var(--p-max-width, 65ch);
+  text-wrap: pretty;
+}
+
+.site-title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 45rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+section {
+  padding-block: 1rem;
+}
+
+.card {
+  --background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+  --background-odd: linear-gradient(45deg, #f64f59, #c471ed, #12c2e9);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  isolation: isolate;
+  margin-block: 3rem;
+}
+
+.profile {
+  display: flex;
+}
+
+.centered-text {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    display: block;
+  }
+
+  .wrapper {
+    max-width: 22rem;
+  }
+}
+
+.neon-border {
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+}
+
+.neon-text {
+  text-shadow:
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #bc13fe,
+    0 0 45px #bc13fe,
+    0 0 55px #bc13fe,
+    0 0 70px #bc13fe,
+    0 0 80px #bc13fe;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.neon-text:after {
+  opacity: 0;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;
+  color: #fff;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.neon-text:after:hover {
+  opacity: 1;
+}
+
+.neon-link {
+  text-shadow:
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #0375c0,
+    0 0 45px #0375c0,
+    0 0 55px #0375c0,
+    0 0 70px #0375c0,
+    0 0 80px #0375c0;
+  color: #fff;
+  text-align: center;
+}
+
+.neon-link:after {
+  opacity: 0;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0375c0,
+    0 0 82px #0375c0,
+    0 0 92px #0375c0,
+    0 0 102px #0375c0,
+    0 0 151px #0375c0;
+  color: #fff;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.neon-link:after:hover {
+  opacity: 1;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
