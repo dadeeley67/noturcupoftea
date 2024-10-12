@@ -53,14 +53,20 @@ li {
   text-wrap: pretty;
 }
 
+p,
+a {
+  font-size: 1.2em;
+}
+
 .site-title {
   font-size: 3rem;
   margin-bottom: 0;
   text-align: center;
+  line-height: 1rem;
 }
 
 .site-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .wrapper {
@@ -104,6 +110,11 @@ section {
 
   .wrapper {
     max-width: 22rem;
+  }
+
+  p,
+  a {
+    font-size: 1.1em;
   }
 }
 
